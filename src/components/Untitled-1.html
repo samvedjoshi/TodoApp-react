@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!-- Question: 17) Design a web page for a hospital website the following tags i) lists: ordered and unordered, 
+image and anchor ii) add transition and animation properties 
+Author- @Jash Mehta 
+-->
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Css for header with the same page anchor tags-->
+<!-- Css for Image Gallery-->
+<!-- Zoom on hover transition CSS-->
+<!-- Padding for list so on hover image does not affect text-->
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #888;
+}
+
+.topnav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+.grid {
+  display :grid;
+  padding-left: 10px;
+  padding-right: 10px;
+  grid-template-columns:auto auto auto auto;
+  grid-column-gap:50px;
+ 
+}
+.gallery{
+    transition-property:all;
+  transition-duration: 0.5s;
+  border: 1px solid #ccc;
+}
+
+.gallery:hover {
+    position:relative;
+    top:-25px;
+    left:-35px;
+    width:500px;
+    height:auto;
+    display:block;
+    z-index:999;
+    transform: scale(1.05);
+	
+	
+}
+
+.gallery img {
+  width: 100%;
+  height: 300px;
+}
+
+.list{
+padding-top: 180px;
+padding-bottom: 30px;
+}
+</style>
+<title>K.J Somaiya Hospital</title>
+</head>
+<body style="background-color:powderblue;">
+<!--  header with the same page anchor tags-->
+<div class="topnav">
+  <a class="active" href="pracs.html">Home</a>
+  <a href="#Vaccine">Vaccine</a>
+  <a href="#Gallery">Gallery</a>
+  <a href="#Dash">Dashboard</a>
+</div>
+<h2 align="center"> KJ Somaiya Hospital</h2>
+
+<!-- Unordered List-->
+<h4 align="left" id="vaccine"> Type of Vaccine Available</h4>
+<ul style="list-style-type:circle;">
+	<li>Covisheild</li>
+	<li>Covaxin</li>
+</ul>
+
+</br></br></br></br>
+<!-- Image gallery with zoom on hover property transition-->
+<h4 align="left" id="Gallery">Gallery</h4>  
+<div class="grid">
+<div class="gallery">
+
+    <img src="https://www.healthcareitnews.com/sites/hitn/files/Hospital-HITN.jpg" alt="Vaccine" width="600" height="400">
+ </div>
+ <div class="gallery">
+
+    <img src="https://www.joonsquare.com/usermanage/image/business/sevenhills-hospital-mumbai-suburban-8241/sevenhills-hospital-mumbai-suburban-sevenhills-hospital-1.png" alt="Vaccine" width="600" height="400">
+ </div>
+ <div class="gallery">
+
+    <img src="https://images1-fabric.practo.com/jupiter-hospital-thane-1490334301-58d4b25dc5278.jpg" alt="Hospital" width="600" height="400">
+ </div>
+ <div class="gallery">
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROp4vSbWM7c71rZ4YYCciK3LXvCtygMdE3pw&usqp=CAU" alt="Hospital" width="600" height="400">
+ </div>
+</div>
+</br></br></br></br></br></br></br></br>
+<!-- Ordered List-->
+<div class="list">
+<h4 align="left" id="Dash"> Dashboard</h4>
+<ol type="1">
+	<li>Total beds:345</li>
+	<li>Available Beds:124</li>
+	<li>ICU Available:4</li>
+	<li>General Ward:44</li>
+</ol>
+</div>
